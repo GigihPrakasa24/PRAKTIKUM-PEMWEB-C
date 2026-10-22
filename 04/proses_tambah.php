@@ -12,6 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $npm = $_POST['npm'] ?? '';
     $nama = $_POST['nama'] ?? '';
     $program_studi = $_POST['program_studi'] ?? '';
+    $angkatan = $_POST['tahun'] ?? '';
+    $email = $_POST['email'] ?? '';
     
 
     // Panggil fungsi proses tambah data dengan validasi server-side
@@ -28,4 +30,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // Redirect kembali ke halaman utama
 // Percobaan 4-3 Langkah 6
-
+header('Location: index.php#daftar-mahasiswa')
+exit;
